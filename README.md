@@ -1,5 +1,5 @@
  
-
+Use arrows or WASD to move, down to swap gravity, and up to jump
 
 > Open this page at [https://minecraftcoder17.github.io/hackatime-game/](https://minecraftcoder17.github.io/hackatime-game/)
 
