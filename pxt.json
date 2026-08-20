@@ -2,7 +2,8 @@
     "name": "Hackatime Game",
     "description": "",
     "dependencies": {
-        "device": "*"
+        "device": "*",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.2.0"
     },
     "files": [
         "main.blocks",
