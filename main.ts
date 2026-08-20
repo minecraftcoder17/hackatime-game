@@ -18,6 +18,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
     MainPlayer.setPosition(spawnx, spawny)
     MainPlayer.ay = 600
+    MainPlayer.setVelocity(0, 0)
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile7`, function (sprite, location) {
     spawnx = MainPlayer.x
@@ -26,6 +27,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile7`, function (sprite, l
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
     MainPlayer.setPosition(spawnx, spawny)
     MainPlayer.ay = 600
+    MainPlayer.setVelocity(0, 0)
+})
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile8`, function (sprite, location) {
+    game.gameOver(true)
 })
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     if (CanFlipGravity == 1) {
@@ -43,7 +48,6 @@ tileUtil.connectMaps(tilemap`level`, tilemap`level2`, MapConnectionKind.Door1)
 MoveCooldown = -1
 scene.setBackgroundColor(9)
 MainPlayer = sprites.create(assets.image`front`, SpriteKind.Player)
-let Hat = sprites.create(assets.image`Hat`, SpriteKind.Hat)
 MainPlayer.ay = 600
 tiles.setCurrentTilemap(tilemap`level`)
 MainPlayer.fx = 500
