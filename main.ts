@@ -14,8 +14,14 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
         MainPlayer.setImage(assets.image`left`)
     }
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
+    MainPlayer.setPosition(10, 61)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile3`, function (sprite, location) {
     MainPlayer.setPosition(10, 61)
+})
+controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
+    MainPlayer.ay = MainPlayer.ay * -1
 })
 let MainPlayer: Sprite = null
 let MoveCooldown = 0
@@ -23,9 +29,10 @@ tileUtil.connectMaps(tilemap`level`, tilemap`level2`, MapConnectionKind.Door1)
 MoveCooldown = -1
 scene.setBackgroundColor(9)
 MainPlayer = sprites.create(assets.image`front`, SpriteKind.Player)
-MainPlayer.ay = 300
+MainPlayer.ay = 600
 tiles.setCurrentTilemap(tilemap`level`)
 MainPlayer.fx = 300
+MainPlayer.sayText("Press \"Down\"", 5000, false)
 forever(function () {
     scene.cameraFollowSprite(MainPlayer)
     if (100 + MoveCooldown < game.runtime()) {
@@ -40,12 +47,5 @@ forever(function () {
             	
             }
         }
-    }
-    if (MainPlayer.x > 240) {
-        tiles.setCurrentTilemap(tilemap`level2`)
-        MainPlayer.setPosition(10, 61)
-        MainPlayer.setVelocity(0, 0)
-    } else {
-    	
     }
 })
