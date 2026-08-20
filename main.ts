@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const Ground = SpriteKind.create()
+    export const Hat = SpriteKind.create()
 }
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     if (MainPlayer.isHittingTile(CollisionDirection.Bottom) || MainPlayer.isHittingTile(CollisionDirection.Top)) {
@@ -33,6 +34,7 @@ tileUtil.connectMaps(tilemap`level`, tilemap`level2`, MapConnectionKind.Door1)
 MoveCooldown = -1
 scene.setBackgroundColor(9)
 MainPlayer = sprites.create(assets.image`front`, SpriteKind.Player)
+let Hat = sprites.create(assets.image`Hat`, SpriteKind.Hat)
 MainPlayer.ay = 600
 tiles.setCurrentTilemap(tilemap`level`)
 MainPlayer.fx = 500

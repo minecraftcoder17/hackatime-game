@@ -24,6 +24,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "myImage0"
     },
+    "image6": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwAAAAAAAAAPAAAAAA///P/wAAAAD//8//AAAAAP//z/8AAAAA///P/wAAAAD//8//AAAAAP//z/8AAAAAAAAA8AAAAAAAAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Hat"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
